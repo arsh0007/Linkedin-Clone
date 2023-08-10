@@ -35,7 +35,7 @@ const Header = (props)=>
                             <a>
                                 <img src="/images/nav-network.svg" alt="" />
                                 <span>
-                                    My Networks
+                                    My Network
                                 </span>
                             </a>
                         </NavList>
@@ -235,11 +235,22 @@ a{
 }
 `;
 
+const SignOut = styled.div`
+
+position: absolute;
+top: 45px;
+background: white;
+border-radius: 0 0 5px 5px;
+width: 100px;
+height: 40px;
+font-size: 16px;
+transition-duration: 167ms;
+text-align: center;
+display: none;
+
+`;
+
 const User = styled(NavList)`
-a > svg {
-    width: 24px;
-    border-radius: 50%;
-}
 a > img {
     width: 24px;
     height: 24px;
@@ -249,29 +260,16 @@ span{
     display: flex;
     align-items: center;
 }
-&:hover 
-{
+
+&:hover {
     ${SignOut}
     {
         align-items: center;
+        display: flex;
         justify-content: center;
-
     }
 }
 
-`;
-
-const SignOut = styled.div`
-position: absolute;
-top: 45px;
-background: white;
-border-radius: 0 0 5px 5px;
-width: 100%;
-height: 40px;
-font-size: 16px;
-transition-duration: 167ms;
-text-align: center;
-display: none;
 `;
 
 const Work = styled(User)`
